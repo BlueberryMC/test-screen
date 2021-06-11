@@ -6,7 +6,7 @@
 
     <groupId>net.blueberrymc</groupId>
     <artifactId>test-screen</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -23,6 +23,19 @@
                     <excludes>
                         <exclude>net/blueberrymc/screenTester/</exclude>
                     </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <index>true</index>
+                        <manifestEntries>
+                            <Multi-Release>true</Multi-Release>
+                        </manifestEntries>
+                    </archive>
                 </configuration>
             </plugin>
         </plugins>
